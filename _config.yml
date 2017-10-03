@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: Subtly Chaotic
 header-img: img/home-bg.png
 email: yellow.khaos@gmail.com
 copyright_name: thekevinhuang
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Fighting entropy one line at a time.
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: khaosnrg
 github_username:  thekevinhuang
