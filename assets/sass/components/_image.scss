@@ -52,6 +52,21 @@
 			}
 		}
 
+		&.part {
+			display: block;
+			margin: (_size(element-margin) * 1.25) 0;
+			width: 30%;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			img {
+				width: 30%;
+			}
+
+		}
+
 		&.main {
 			display: block;
 			margin: (_size(element-margin) * 2) 0;
