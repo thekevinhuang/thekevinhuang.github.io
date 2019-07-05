@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mixed Technologies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index" class="logo">Kevin Huang</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="index">What I'm up to</a></li>
+							<li><a href="list">Thought Index</a></li>
+                            <li><a href="experience">Professional Experience</a></li>
+                            <li><a href="about">Who I am</a></li>
+						</ul>
+						<ul class="icons">
+                                <li><a href="https://www.instagram.com/khaosnrg" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="https://github.com/thekevinhuang/" class="icon fa-github"><span class="label">GitHub</span></a></li>                      
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+                                    <h1>Mixed Technologies</h1>
+                                    <span class="date">January 21, 2019</span>
+								</header>
+                                <p>
+                                    This was a project of many stages.
+                                </p>
+                                <p>
+                                    <bold>Stage 1: Understanding the opportunities for improvement</bold>   
+                                </p>
+                                <p>
+                                    On one hand, I knew almost exactly what needed to be done. 
+                                    The structure of application that I had built previously gave many
+                                     opportunities to streamline the user experience using AJAX requests. 
+                                    With many parent/child relationships and various forms to submit on almost every page, 
+                                    there were many places to improve the flow and reflect the modern 
+                                    unwillingness to continually load or navigate to new pages to aquire or submit related information. 
+                                </p>
+                                <p>
+                                    I remember when Google maps couldn't be scrolled or zoomed naturally. 
+                                    I remember when the internet was so slow that multiple page reloads made the internet experience feel incredibly slow. 
+                                    I remember when I initially built this application, there was this feeling of a dimensional disruption. 
+                                    Time itself had somehow broken down and I just sat there staring at a blank page while the next one was being rendered. At the time I didn't know what I could do about it.
+                                    <br>
+                                    But now I do!
+                                </p>
+                                <p>
+                                    <bold>Stage 2: Surprise at the increased complexity</bold>   
+                                </p>
+                                <p>
+                                    Or do I?
+                                    <br>
+                                    Turns out while I had handled quite a few one page projects using AJAX (e.g. tic-tac-toe) 
+                                    I hadn't really had much experience creating applications with many pages using JS script. 
+                                    I went through an almost meltdown where I wanted to organize page specific JS code but it seems 
+                                    like all my js code would load on every page. I was in the middle of a war between wanting 
+                                    to have very targeted scripts while hearing that almost all of the efficiencies of the 
+                                    rails asset pipeline and only downloading JS scripts a single time. 
+                                </p>
+                                <p>
+                                    I couldn't necessarily make an organization decision at that point so I took it one step at a time. 
+                                    Let me create a page that is able to load assets asynchronously like I had learned and we can move from there. 
+                                    Wait. There was another issue. I was trying to be clever when I first developed my app. 
+                                    I created a form partial that was generic and if you submitted a parent and child as locals, 
+                                    a dynamic form would be created and displayed. 
+                                    This way you wouldn't have to create almost identical forms for every parent/child relationship.
+                                </p>
+                                <p>
+                                    Deep Breath!
+                                    <br> 
+                                    After reviewing some material and some google searching. 
+                                    I realized I could still utilize some of the Ruby instance variables if 
+                                    I handled requests in my controller by responding with a new js.erb file. 
+                                    This way I would have access to many of the variables from the backend, 
+                                    pages would have JS specific to them, and as an added bonus, I could greatly leverage the code 
+                                    I had previously painstakingly crafted. 
+                                    <br>
+                                    But time froze again.
+                                </p>
+                                <p>
+                                    <bold>Stage 3: Unmixing Technology</bold>
+                                </p>
+                                <p>
+                                    Submitting forms would once again send me to another realm where I 
+                                    pondered the fate of my information.
+                                    Did it work? I found myself wondering this constantly. 
+                                    Response time was sluggish and the experience felt terrible. 
+                                    I couldn't really keep the experience like this. 
+                                    Did I technically create an AJAX request that would load new 
+                                    information without navigating to a new page? 
+                                    Yes, I did. But I really just shifted the loading time 
+                                    from a whole page load to an even stranger area where the 
+                                    page looked loaded but most of the page was mysteriously blank. 
+                                    Then all of a sudden a mass of html would pop into existence.
+                                </p>
+                                <p>
+                                    Yes AJAX requests feel almost like magic but this was maybe a little too magical. 
+                                    It felt like I had no control of what was happening or when.
+                                    I now had a better understanding of why people generally recommended not to have views, 
+                                    controllers, models, or scripts utilize too many different sets of code. 
+                                    Everything became confusing and felt unpleasant. 
+                                </p>
+                                <p>
+                                    For example, I was in a index view looking at HTML, 
+                                    it loaded the list of Item Categories using some ruby code in ERB. 
+                                    When I hit the button to add a new Item Category there was a blank space at the 
+                                    bottom of the page while an ajax request was sent, a new .js.erb file had to be loaded, 
+                                    the sole purpose of which was to dig up another file with ruby code in ERB. 
+                                    Then once that loaded, we were back in JS land which handled the request and (slowly) 
+                                    loaded the resulting form in the page in HTML. All this was just to get a form to show up.
+                                    Then we were back in JS once we tried to submit.
+                                </p>
+                                <p>
+                                    The page would once again blank out at the bottom and you wait for the POST action. 
+                                    But since we added something asynchronously, we obviously had to call another JS script 
+                                    which then called out to the controller to ask for the whole list of Item Categories 
+                                    and replace the Ruby/ERB loaded code in the beginning.
+                                    The result was a miserable experience both for the user and for the devloper.
+                                    So we decided to attempt to streamline.
+                                </p>
+                                <p>
+                                    <bold>Stage 4: Reinventing the wheel</bold>
+                                </p>
+                                <p>
+                                    I know that people hate reinventing the wheel. 
+                                    <br>
+                                    I really didn't like taking apart aspects of my "working" application 
+                                    to make it better. I knew things would break and I had to be extremely careful
+                                     to ensure that my new version played well with the existing rails structure.
+                                    I also hated the idea of having to create a new form for every class. 
+                                    I thought it was unnecessary before and it still is.
+                                </p>
+                                <p>
+                                    So we set off on a new quest. Let's make the wheel better...but still the same. 
+                                    One of the first things I realized was that many of the neat little things I did with 
+                                    calling the child collection or an particular instance's parent were 
+                                    not really available to me if I cut out the ERB and partial rendering assist. 
+                                    I had to find other ways to acquire the same data. 
+                                </p>
+                                <p>
+                                    To the rescue: Serializers.
+                                    Serializers essentially allowed me to still access many of the rails 
+                                    Active Record relationships that were so important.
+                                    Custom routes and controller API endpoints allowed me to restrict/filter/sort the results as well.
+                                    Between serializers and the JS template literals, I was able to painstakingly recreate the templates 
+                                    I had built previously. So we were back in business!
+                                </p>
+                                <p>
+                                    <bold>Stage 5: Disaster Relief - New Class of Problem</bold>
+                                </p>
+                                <p>
+                                    Recreating the forms was a large effort. 
+                                    Many changes had to be made all around the application. 
+                                    The Javascript side of things was starting to get really out of hand since we shifted 
+                                    much of the view functionality back to JS. 
+                                    Something had to be done here to make the code more legible and streamlined.
+                                    <br>
+                                    New to the spotlight: Javascript Classes!
+                                    <br>
+                                    Now that we had things working again, it was once again time to break them down. 
+                                    After some pondering, I felt that each view could essentially be represented by 
+                                    one Javascript class. This way important attributes could be stored and functions 
+                                    would be more organized. While the change was mostly one of reorganization, 
+                                    the code changes required were not insignificant. But now we had solved another problem. 
+                                    The JS organization problem. Now it was very clear which methods were being used in 
+                                    which situations and there would be very little confusion. 
+                                    This made debugging and further tweaking much easier. 
+                                    It is much easier to find what you are looking for if you know where to look!
+                                </p>
+                                <p>
+                                    <bold>Stage 6: Finishing Touches</bold>
+                                </p>
+                                <p>
+                                    After going through and revamping all of the existing JS into the class structure, 
+                                    there were still more pages that had to be converted and additional 
+                                    features that were built out. But the major stucture and design had been 
+                                    completed. We achieved almost instantaneous AJAX asset loading as well as form 
+                                    creation/submission. Our javascript was well organized and clear in its intention. 
+                                    Most importantly, I had figured out a pattern specific to my application that 
+                                    appropriately mixed technologies to achieve the desired result beyond a single page.
+                                </p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="https://formspree.io/thekevinhuang@gmail.com">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
