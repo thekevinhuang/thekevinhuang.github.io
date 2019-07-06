@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Structures of Data Structures</title>
+		<title>Structures of Data Structures: Linked List</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -42,7 +42,7 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-                                    <h1>Structures of Data Structures</h1>
+                                    <h1>Structures of Data Structures: Linked List</h1>
                                     <span class="date">July 6, 2019</span>
 								</header>
                                 <p>
@@ -62,7 +62,41 @@
                                     in the search to becoming a hacking master. A lot of patterns were similar and common across them.
                                 </p>
                                 <p>
-                                    
+                                    Now these were things that maybe aren't used constantly when you are creating components in React or
+                                    creating an application, but they do help create a way to organize and think about problems. Initially, 
+                                    I thought that these other structures were building blocks like arrays or strings that I just never had 
+                                    any exposure to. Turns out that isn't really the case. A lot of the implementations of data structures 
+                                    actually utilize arrays or hashes. So to get up to speed and learn how wrong I was, I've been watching 
+                                    a very helpful series of videos on data structures on <a href="https://youtu.be/92S4zgXN17o">Youtube</a>.
+                                </p>
+                                <p>
+                                    At this point everyone knows about arrays and hashes and how they can store data of many different types. 
+                                    I didn't really understand the implementation in terms of memory. The array structure itself is generally a 
+                                    continuous block of memory. This is how the array achieves high speed of lookup performance because the computer 
+                                    can easily calculate where the nth item is by starting at the beginning and calculating n times size of data. 
+                                </p>
+                                <p>
+                                    Since when you create an array it is a fixed block of continuous memory, there are some inefficiencies in adding 
+                                    elements to an array beyond its size. Every time you reach the limit of the 
+                                    array you have to create a new, larger, empty array and copy all the items into the new array.
+                                     but I haven't worked with applications large enough to even experience that.
+                                </p>
+                                <p>
+                                    There is another structure that is often compared against arrays: the linked list. Prior to this Youtube series, 
+                                    I had never known that linked lists existed, let alone implemented one. The concept of a linked list is as follows. 
+                                    There is a class or an object called a node. The node usually stores some data element and a reference to the next node. 
+                                    That's it! It is super easy to add a new node to the end of a linked list, but in order to find data you have to start 
+                                    at the head and follow it until you find what you are looking for. Linked list manipulation is all about traversing the 
+                                    linked list and either creating, inserting, or deleting the references to other nodes. 
+                                </p>
+                                <p>
+                                    In addition to the ease of creating new nodes to append, (without having to create a completely new array) there is 
+                                    the added (yet pretty much unseen) benefit of having nodes be stored throughout the memory and not requiring a single 
+                                    block of memory.
+                                </p>
+                                <p>
+                                    There are quite a few questions I've seen on various websites that involve linked lists, but now that I know about them 
+                                    I should be better equipped to tackle them.
                                 </p>
 							</section>
 					</div>
