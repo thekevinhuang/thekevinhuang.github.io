@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Here we go again: Stacks and Queues</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index" class="logo">Kevin Huang</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="../index">What I'm up to</a></li>
+							<li><a href="../list">Thought Index</a></li>
+                            <li><a href="../experience">Professional Experience</a></li>
+                            <li><a href="../about">Who I am</a></li>
+						</ul>
+						<ul class="icons">
+                                <li><a href="https://www.instagram.com/khaosnrg" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="https://github.com/thekevinhuang/" class="icon fa-github"><span class="label">GitHub</span></a></li>                      
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+                                    <h1>Here we go again: Stacks and Queues</h1>
+                                    <span class="date">July 13, 2019</span>
+								</header>
+                                <p>
+                                    Here is another curious thing about data structures that I've learned about: data structures aren't necessarily  
+                                    new basic constructs like arrays or linked lists.
+                                </p>
+                                <p>
+                                    When I found out that there were all these other data structures like stacks, queues, trees, and graphs I was surprised 
+                                    that I could build anything of importance while the only knowing/using arrays and hashes. What I didn't understand at the time 
+                                    was that many of the data structures listed above are implemented using arrays and linked lists. They are less of their own 
+                                    basic data storage forms, and are more of a way of thinking and organizing data to model specific problems. The "simplest" of 
+                                    these are stacks and queues.
+                                </p>
+                                <p>
+                                    <bold>Stacks</bold>
+                                </p>
+                                <p>
+                                    Imagine if you had a box (with a closed bottom) and it was just wide enough to hold one jenga piece at a time. It is a very narrow but tall box. 
+                                    If you put in a piece, the top is open and so you should be able to take that piece back out (let's ignore how difficult it would be 
+                                    to reach into such a narrow long box to retrieve said piece). But what happens when you put in two pieces? You can only pull out 
+                                    the first piece after you have already removed the second piece. This is what is referred to as a LIFO or last in, first out 
+                                    structure. Only the last thing that was put into the stack, can be accessed at any given time.
+                                </p>
+                                <p>
+                                    Stacks can easily be implemented with tools that we are already familiar with. With arrays for example, we can push new elements and 
+                                    pop them just as easily. Linked lists can be used to represent a stack as well, but in order to keep the access of the latest element 
+                                    at time complexity O(1) instead of adding to the tail end of the linked list, you have to add and delete at the head end.
+                                </p>
+                                <p>
+                                    So who cares? If they are just different ways to use tools that we are familiar with already, why do we need to know about them? 
+                                </p>
+                                <p>
+                                    Most data structures represent a way of thinking about data manipulation. A (somewhat contrived) example 
+                                    may be that you want to check if, in a string, there are immediately adjacent character duplicates. As you comb 
+                                    through a string, throw each character into your stack, if the next character doesn't match, just pop it back out 
+                                    and throw the next character into your stack. If it does match what is in your stack, push the character and you can even 
+                                    count the number of consecutives. While this is a somewhat niche usage, stacks are utilized to help computers process 
+                                    mathematical expressions that contain parentheses. Adding opening parentheses and not popping them until you have their corresponding 
+                                    closing parentheses becomes much easier to organize. A formula can have 1000 parentheses and the computer can systematically 
+                                    push and pop without having to check from the beginning every single time. A similar process is used to check for brackets in code.
+                                </p>
+                                <p>
+                                    <bold>Queues</bold>
+                                </p>
+                                <p>
+                                    So what about queues? Queues, like stacks, represent a way to represent real world situations. Much like the British 
+                                    English usage of the word, queues can be used to represent a line of users waiting for service. This structure, unlike the 
+                                    above, is a FIFO or first in first out. The first person to line up in a line is the first person to get served. This has 
+                                    much more obvious real world data resemblence. If you were ordering food at a fast food establishment, you would be upset 
+                                    if someone just inserted themselves in front of you. In the same fashion, if you were waiting to chat with a customer representative 
+                                    on a website, you trust that the order in which you are added is the same order that you are served. An implementation where 
+                                    users were just randomly inserted, and removed could result in some people never being served!
+                                </p>
+                                <p>
+                                    The more that I learn about the various data structures, the more I see their value as a part of the developer's toolkit. 
+                                    I see a greater overlap between the coded world and the one we live in. And that is kind of the point of all this right? 
+                                    How do we best solve real world problems?
+                                </p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="https://formspree.io/thekevinhuang@gmail.com">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
