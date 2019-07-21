@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>A slightly more Organized Approach</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index" class="logo">Kevin Huang</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="../index">What I'm up to</a></li>
+							<li><a href="../list">Thought Index</a></li>
+                            <li><a href="../experience">Professional Experience</a></li>
+                            <li><a href="../about">Who I am</a></li>
+						</ul>
+						<ul class="icons">
+                                <li><a href="https://www.instagram.com/khaosnrg" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="https://github.com/thekevinhuang/" class="icon fa-github"><span class="label">GitHub</span></a></li>                      
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+                                    <h1>A slightly more Organized Approach</h1>
+                                    <span class="date">July 20, 2019</span>
+								</header>
+                                <p>
+                                    Up until now, most of the data structures that we have covered didn't need to be organized in any way. 
+                                    You could append whatever values you wanted to your stack, queue, or list. In fact, they were built specifically 
+                                    for that purpose. Either LIFO or FIFO, they were meant to control solely the order which you interacted with elements.
+                                </p>
+                                <p>
+                                    But let's talk about a structure that "requires" organization.
+                                </p>
+                                <p>
+                                    <bold>Binary Trees</bold>
+                                </p>
+                                <p>
+                                    Now what is curious is the difference between the way trees are visualized and the way that they are represented/implemented. 
+                                    Their visualization is almost two dimensional. The basic structure is similar to that of a linked list. Data is stored in nodes. 
+                                    The nodes, instead of only linking to the next node (or the previous node also in the case of doubly linked lists) now can 
+                                    potentially link to two nodes: right and left.
+                                </p>
+                                <p>
+                                    Each subsequent node can have its own left and right children and so on. This results in what honestly is more like roots or 
+                                    an upside down tree, but branches I guess.
+                                </p>
+                                <p>
+                                    Now is probably a good time to backpedal on a claim I made earlier that the tree requires organization. This isn't strictly true. 
+                                    You don't have to sort or order your nodes in any particular manner if you don't want to, but you might as well use an array 
+                                    then. In order to find values if there are no relationships between parents and children, it is just a list like object with 
+                                    random numbers and searching still requires you to traverse the whole list.
+                                </p>
+                                <p>
+                                    So what makes the organization important?
+                                </p>
+                                <p>
+                                    <bold>SEARCH TREES!</bold>
+                                </p>
+                                <p>
+                                    Let's take an example of a tree filled with numbers that was sorted so that the following was true: Left children had smaller 
+                                    values and Right children had larger values. And let's also enforce that this is true for all nodes in all the trees and subtrees. 
+                                     Now if we start with a list of 100 numbers and pick a number in the middle to start, 
+                                    if we are looking for a certain value, our first comparison to the middle(head) node would allow us to eliminate half the numbers 
+                                    immediately. Let's say the numbers were 1-100 and we started with 50. If we were looking for the number 32, we could 
+                                    immediately eliminate all the numbers to the right of 50 (i.e. 51-100). All those numbers we would never have to search. 
+                                </p>
+                                <p>
+                                    What happens next? We go again to the middle of the remaining numbers. 1-49. (49 - 1)/2 = 24. Now we can eliminate all the 
+                                    numbers <= to 24. (49-25)/2 = 12. 12 + 25 = 37. Next comparison eliminates everything between 37 and 49. (36-25)/2 = 5.5 ~6.
+                                    31 is the next comparison point and everything between 25 and 31 is eliminated. (36 - 32)/2 = 2 so 34 is the next comparison. 
+                                    34, 35, 36 eliminated. leaving only 32 and 33.
+                                </p>
+                                <p>
+                                    So what does that mean? We made 6 or 7 comparisons to find the number instead of the potentially 100 that we might have needed 
+                                    in an unordered list, searching one by one. Generally you can calculate the time to find things in binary search trees 
+                                    using O(log(n)) time as opposed to the full O(n) search time you might expect otherwise.
+                                </p>
+                                <p>
+                                    Now there is more to the binary tree structure, including definitions and additional applications but I 
+                                    wanted to touch on the power of organizing your data. More to come in the future.
+                                </p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="https://formspree.io/thekevinhuang@gmail.com">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
