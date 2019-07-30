@@ -98,25 +98,34 @@
                                     <strong>DRY - Don't Repeat Yourself.</strong> Subway lines definitely intersect, but not every single subway line needs 
                                     to directly connect to every subway station. Trains can handle their own subset of the network, only ensuring 
                                     that they don't collide with one another. Well structured code should also be able to handle their own tasks, 
-                                    only ensuring that they play well with the other pieces.
+                                    only ensuring that they play well with the other pieces. It is important, however, to make sure that you start off building 
+                                    what you need before thinking about making it pretty. If it is critical to lay a piece of track to connect two stations, 
+                                    you should do it, even if it might encroach on other tracks that you have completed previously. Then fix it. Combine the subway 
+                                    station, improve the efficiency and flow, all without sacrificing a working track.
                                 </p>
                                 <p>
                                     <strong>YAGNI - You Aren't Gonna Need It.</strong> You shouldn't build things out just because you might need it in the 
                                     future. If NY planned for every single potential route for a train, the entirety of the ground underneath 
                                     the city would be hollow and the buildings would probably all fall in. Tackle the expansions and features 
-                                    you need, as you need them. Otherwise, you aren't going to need it.
+                                    you need, as you need them. Otherwise, you aren't going to need it. Personally, especially at the beginning of a new project, 
+                                    I find myself wanting to tackle the world. I'll worry about all the associations in the data for every single model I want 
+                                    in the app and suddenly, there is a huge cavernous "network" of tunnels to connect data but once I start building on it, 
+                                    things are more confusing than they should be had I taken it step by step.
                                 </p>
                                 <p>
                                     I'd like to introduce another one: <strong>MORAL - Maintain Or Regret A Lot.</strong> I think this speaks 
-                                    to a lot about writing and maintaining code. I think often times people work really hard to put together a 
+                                    to a lot about writing and maintaining code. Often times people work really hard to put together a 
                                     working product. Once it is completed, they just trust that it will keep working. Just like the trains 
                                     that fell into disarray, not keeping up with updates and reviewing the functionality of your code, could 
-                                    result in strange bugs or catastrophic errors that you have no idea how to fix.
+                                    result in strange bugs or catastrophic errors that you have no idea how to fix. Many months later, all of your packages 
+                                    are a couple versions behind and you are caught not pushing forward but working hard to just get things back to working. 
                                 </p>
                                 <p>
                                     On the flip side, we do need to be careful about not preparing at all for the future. a complete lack of scalability 
                                     or code that is written completely without regard for compatibility could end up costing a lot down the line. It might 
-                                    be harder to maintain or involve more refactoring to keep things DRY.
+                                    be harder to maintain or involve more refactoring to keep things DRY. Creating a one lane subway track for example would be 
+                                    a bad idea in almost any case. We have to imagine that after shipping people one way, we might need to provide a way to get them 
+                                    back again.
                                 </p>
                                 <p>
                                     So what does this all mean? I think the main takeaway is that engineering, even though it is a technical profession 
