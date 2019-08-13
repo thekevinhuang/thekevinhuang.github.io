@@ -49,49 +49,101 @@
                                     The age old question. Would roses smell as sweet if they were called glarfls?
                                 </p>
                                 <p>
-                                    
+                                    It doesn't sound as good honestly. And I would argue that there is a lot in a name. I think 
+                                    a lot of engineers would agree. This is one piece of advice that I've heard a lot when writing 
+                                    and sharing code. Use good names!
                                 </p>
                                 <p>
-                                    
+                                    Back to the streets of NY to try and relate engineering with every day life.
                                 </p>
                                 <p>
-                                    
+                                    Let's take the island of manhattan to start.
                                 </p>
                                 <p>
-                                    
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manhattan_neighborhoods.png/1280px-Manhattan_neighborhoods.png" alt="neighborhoods-of-manhattan">
                                 </p>
                                 <p>
-                                    
+                                    A little messy so let's take a step back. Before we get into neighborhoods, let's start with one of the features 
+                                    of Manhattan that makes it so easy to navigate. <strong>THE GRID</strong>
                                 </p>
                                 <p>
-                                    
+                                    <img src="https://media.giphy.com/media/2RlHoeK25farS/giphy.gif" alt="tron-the-grid">
                                 </p>
                                 <p>
-                                    
+                                    With the exception of some of the extremes edges of the island and the honestly confusing south of the island (where West 4th 
+                                    starts intersecting with streets and avenues), most streets are organized in an approachable fashion.
                                 </p>
                                 <p>
-                                    
+                                    Vertical roads are generally avenues and horizontal roads are the streets. This makes things easy to locate.
                                 </p>
                                 <p>
-                                    
+                                    <pre><code>
+                                        arrayX = [thing1, thing2, thing3];
+                                        arrayY = [thing5, thing6, thing9];
+
+                                        for(let x=0; x<arrayY.length; x++){
+                                            for (let i=0; i<arrayX.length; i++) {
+                                                modifyFunction(arrayY[x],arrayX[i]);
+                                            }
+                                        }
+                                        
+                                    </code></pre>
                                 </p>
                                 <p>
-                                    
+                                    Here we have are looping through two arrays. This structure can form something like we have 
+                                    been working with: a grid. For each pass through an element of arrayY, we go through all of the values 
+                                    of arrayX. Then we move to the next element in arrayY. This could even be a rudimentary representation of 
+                                    an avenue/street structure. 
                                 </p>
                                 <p>
-                                
+                                    While working through this array, we create new variables i and x to count our way through the number of 
+                                    items in the arrays. We don't really need to know anything about the number represented by i or x. It is easy to 
+                                    increment and after we finish the navigation we don't really need to use it again. This is a great situation 
+                                    to use simple letter names to represent values.
                                 </p>
                                 <p>
-                                
+                                    Now here I believe middle school education did us somewhat of a disservice. We spent so many hours and so much 
+                                    time trying to find the value of X where X could represent everything and was used in just about all situations. 
                                 </p>
                                 <p>
-                                    
+                                    Solving a problem about trains that will, for some reason, collide after some time of traveling at different speeds? 
+                                    Let's just set one speed as X and the other as Y. By the time you are finished with your calculation, which one is which? 
+                                    In the above array example, if we wanted to know which one represented avenues and which one was streets, shouldn't we have 
+                                    just named them that way? At the time maybe it was faster just to call them X and Y. After a while, after some hundreds of lines of code
+                                    , we aren't sure why we used the x counter for arrayY or what arrayY really is.
                                 </p>
                                 <p>
-                                    
+                                    This habit dies hard, especially in situations where you want to do a quick calculation. Let's 
+                                    think back to the grid of Manhattan and our made up array example. Let's say we wanted to add things to our grid. 
+                                    above we are using some function not displayed called modifyFunction on the elements in the arrays.
                                 </p>
                                 <p>
-                                    
+                                    But wait, you couldn't really tell any of that from the above could you? modifyFunction could be doing anything, adding 
+                                    stoplights, buildings, sewers, garbage cans, really anything. If you had 100 people contributing to this, every single person 
+                                    would have to figure out what all the parts do. In fact, the only thing that is understandable is how you are navigating the arrays.
+                                </p>
+                                <p>
+                                    <pre><code>
+                                            streetArray = [firstStreet, secondStreet, thirdStreet];
+                                            avenueArray = [fifthAvenue, sixthAvenue, ninethAvenue];
+    
+                                            for(let x=0; x<avenueArray.length; x++){
+                                                for (let i=0; i<streetArray.length; i++) {
+                                                    addRoseGarden(avenueArray[x],streetArray[i]);
+                                                }
+                                            }
+                                            
+                                    </code></pre>
+                                </p>
+                                <p>
+                                    In addition to creating more readible and shareable code for others, names are good for summarizing 
+                                    information. Remember those neighborhoods that we saw earlier, you could write out each neighborhood as 
+                                    a set of boundaries fourtyFifthAndThirdTofiftyNinethAndNineth or midtown. So too much information in your name 
+                                    isn't good either. Once again we end on the conclusion that there is some balance in your names. Approachable, 
+                                    but not overwhelming, true artistry.
+                                </p>
+                                <p>
+                                    A good name can smell sweet after all.
                                 </p>
 							</section>
 					</div>
