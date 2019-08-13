@@ -59,9 +59,9 @@
                                 <p>
                                     Let's take the island of manhattan to start.
                                 </p>
-                                <p>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manhattan_neighborhoods.png/1280px-Manhattan_neighborhoods.png" alt="neighborhoods-of-manhattan">
-                                </p>
+                                
+                                <span class="image fit"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manhattan_neighborhoods.png/1280px-Manhattan_neighborhoods.png" alt="neighborhoods-of-manhattan"></span>
+                                    
                                 <p>
                                     A little messy so let's take a step back. Before we get into neighborhoods, let's start with one of the features 
                                     of Manhattan that makes it so easy to navigate. <strong>THE GRID</strong>
@@ -76,19 +76,16 @@
                                 <p>
                                     Vertical roads are generally avenues and horizontal roads are the streets. This makes things easy to locate.
                                 </p>
-                                <p>
-                                    <pre><code>
-                                        arrayX = [thing1, thing2, thing3];
-                                        arrayY = [thing5, thing6, thing9];
+                                <pre><code>
+                                    arrayX = [thing1, thing2, thing3];
+                                    arrayY = [thing5, thing6, thing9];
 
-                                        for(let x=0; x<arrayY.length; x++){
-                                            for (let i=0; i<arrayX.length; i++) {
-                                                modifyFunction(arrayY[x],arrayX[i]);
-                                            }
+                                    for(let x=0; x<arrayY.length; x++){
+                                        for (let i=0; i<arrayX.length; i++) {
+                                            modifyFunction(arrayY[x],arrayX[i]);
                                         }
-                                        
-                                    </code></pre>
-                                </p>
+                                    }
+                                </code></pre>
                                 <p>
                                     Here we have are looping through two arrays. This structure can form something like we have 
                                     been working with: a grid. For each pass through an element of arrayY, we go through all of the values 
@@ -122,19 +119,18 @@
                                     stoplights, buildings, sewers, garbage cans, really anything. If you had 100 people contributing to this, every single person 
                                     would have to figure out what all the parts do. In fact, the only thing that is understandable is how you are navigating the arrays.
                                 </p>
-                                <p>
-                                    <pre><code>
-                                            streetArray = [firstStreet, secondStreet, thirdStreet];
-                                            avenueArray = [fifthAvenue, sixthAvenue, ninethAvenue];
-    
-                                            for(let x=0; x<avenueArray.length; x++){
-                                                for (let i=0; i<streetArray.length; i++) {
-                                                    addRoseGarden(avenueArray[x],streetArray[i]);
-                                                }
-                                            }
-                                            
-                                    </code></pre>
-                                </p>
+                                
+                                <pre><code>
+                                    streetArray = [firstStreet, secondStreet, thirdStreet];
+                                    avenueArray = [fifthAvenue, sixthAvenue, ninethAvenue];
+                                    
+                                    for(let x=0; x<avenueArray.length; x++){
+                                        for (let i=0; i<streetArray.length; i++) {
+                                            addRoseGarden(avenueArray[x],streetArray[i]);
+                                        }
+                                    }        
+                                </code></pre>
+                                
                                 <p>
                                     In addition to creating more readible and shareable code for others, names are good for summarizing 
                                     information. Remember those neighborhoods that we saw earlier, you could write out each neighborhood as 
