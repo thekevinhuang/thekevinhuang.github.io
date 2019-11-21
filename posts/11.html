@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>What's in a name?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index" class="logo">Kevin Huang</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="../index">What I'm up to</a></li>
+							<li><a href="../list">Thought Index</a></li>
+                            <li><a href="../experience">Professional Experience</a></li>
+                            <li><a href="../about">Who I am</a></li>
+						</ul>
+						<ul class="icons">
+                                <li><a href="https://www.instagram.com/khaosnrg" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="https://github.com/thekevinhuang/" class="icon fa-github"><span class="label">GitHub</span></a></li>                      
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+                                    <h1>Rap.js</h1>
+                                    <span class="date">November 21, 2019</span>
+								</header>
+                                <p>
+                                    My wife and I recently watched the show Rhythm and Flow on Netflix.
+                                    If you aren’t familiar with it, it is essentially The Voice but for rap.
+                                </p>
+                                <p>
+                                    Over the course of the show, they covered a couple different elements that sets rappers apart:
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Content</li>
+                                        <li>Approachability</li>
+                                        <li>Stage Presence</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    I was inspired by the show to write some of my own rhymes and I did so
+                                     to perform at a friend’s baby shower to honor the daughter they are expecting. 
+                                     As I wrote, I found there to be a lot of commonalities between rap and writing code.
+                                </p>
+                                
+                                <span class="image fit"><img src="https://gph.is/1bRXORi" alt="baby-dancing"></span>
+                                    
+                                <p>
+                                    This maybe sounds stupid, but hear me out. Also, I don’t claim to be a good lyricist, 
+                                    I just want to walk through my thought process.
+                                </p>
+                                
+                                <p>
+                                    <strong>Content</strong>
+                                </p>
+                                <p>
+                                    No doubt, content is key. Is what I’m writing applicable to the task at hand? 
+                                    What are you trying to accomplish and how do you plan on getting there? 
+                                    For the baby shower rap for example I wanted a structure of the following:
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Intro to couple</li>
+                                        <li>Cool stuff about mom <strong>X5</strong></li>
+                                        <li>Cool stuff about dad <strong>X5</strong></li>
+                                        <li>Line combining two</li>
+                                        <li>Cool stuff about dad <strong>X5</strong></li>
+                                    </ul>
+                                </p>
+
+                                <p>
+                                    This is exactly the approach that I might want to use when coming up with some sort of program/algorithm.
+                                     You think about the parts that you need and then put them together. 
+                                     Each person’s section is 5 sets of 2 rhyming lines with specific details about each person inputted.
+                                </p>
+
+                                <p>
+                                    So we can think about each person as a collection of 5 different facts that I would like to incorporate:
+                                </p>
+
+                                <pre><code>
+    mom = [mfact1, mfact2, mfact3, mfact4, mfact5];
+    dad = [dfact1, dfact2, dfact3, dfact4, dfact5];
+    baby = [bfact1, bfact2, bfact3, bfact4, bfact5];
+                                </code></pre>
+                                <p>
+                                    Each set takes a fact and returns the appropriate lines. 
+                                    This divides the task up into much smaller and approachable bits. 
+                                    Then you repeat this task with different facts from different people and you are done! Sort of.
+                                </p>
+                                <p>
+                                    <strong>Approachability</strong>>
+                                </p>
+                                <p>
+                                    Sure, I know the structure of what I want to write, but how approachable is it? 
+                                    This is a real fine line. If what you’ve written is too long, or the references too obscure, 
+                                    or complicated, it can be difficult for people to understand what you have put down.
+                                </p>
+                                <p>
+                                    For example, if I had chosen to plan out the rap structure above on one line.
+                                </p>
+                                <p>
+                                    Intro to couple; Cool stuff about mom X 5; Cool stuff about dad X 5; Line combining two; Cool stuff about baby X 5
+                                </p>
+                                <p>
+                                    There is definitely decreased approachability and readability. 
+                                    Sometimes rap can have that issue where 100 words just went and you have no idea what just happened. 
+                                    Coding can have the same problem.    
+                                </p>
+                                
+                                <pre><code>
+    Math.max((array1[0]+array1[1])/2,(array2[0]+array2[2])/2);     
+                                </code></pre>
+                                
+                                <p>
+                                    The above is a statement that finds the larger of two averages of the first two elements in two different arrays.
+                                </p>
+                                <p>
+                                    So is this:
+                                </p>
+
+                                <pre><code>
+    let avgArray1 = (array1[0]+array1[1])/2;
+    let avgArray2 = (array2[0]+array2[1])/2;
+    
+    Math.max(avgArray1, avgArray2);     
+                                </code></pre>
+
+                                <p>
+                                    The second is technically longer, yes. But if you can assume that the person knew what they 
+                                    were doing in calculating the average, you can read the last statement and 
+                                    understand what is going on immediately.
+                                </p>
+
+                                <p>
+                                    Just like having too many syllables on one line makes the “flow” hard to follow and 
+                                    your metaphors and content get lost in the mess, short statements 
+                                    in your programs help keep them easy to follow.
+                                </p>
+                                <p>
+                                    That brings us to references. There are often rap references that go over people’s heads. 
+                                    Sometimes they are really clever. Sometimes they are simply confusing.
+                                </p>
+                                <p>
+                                    Check out my post on how confusing names and references can be <a href="/posts/10">here</a>
+                                </p>
+                                <p>
+                                    There is another consideration to make about efficiency but I will write about that in another post.
+                                </p>
+                                <p>
+                                    <strong>Stage Presence</strong>
+                                </p>
+                                <p>
+                                    How do you deliver your message? Are you committed? Is this something you feel comfortable delivering?
+                                </p>
+                                <p>
+                                    As is mentioned a lot in the show, if you aren’t able to engage your audience, you won’t make it as an artist.
+                                     Similarly, if you are unable to talk about the code that you have written or share your thought process, 
+                                     it makes it difficult to show people that you know what you are talking about.
+                                </p>
+                                <p>
+                                    As I try to walk the fine line of accomplishing writing effective code that is approachable, efficient, and easy 
+                                    enough to understand I have to remember to try to talk about it. So this was my attempt for the day. Hopefully this 
+                                    has been an amusing short read about somethings that you might not have thought you would connect today.
+                                </p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="https://formspree.io/thekevinhuang@gmail.com">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
